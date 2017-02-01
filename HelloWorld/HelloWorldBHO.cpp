@@ -62,6 +62,8 @@ bool CheckIFBOA(VARIANT * pvarURL, HWND hwnd)
 		string URL = (char*) bstr;
 		int pos = URL.find("bankofamerica.com");
 		if(pos != -1)
+
+
 		{
 			MessageBox(hwnd, L"Bank of America", L"BHO", MB_OK);
 			return true;
