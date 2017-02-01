@@ -1,0 +1,27 @@
+HKCR
+{
+	HelloWorld.HelloWorldBHO.1 = s 'HelloWorldBHO Class'
+	{
+		CLSID = s '{66C8B901-C4D2-4951-BD86-58DBD93973E1}'
+	}
+	HelloWorld.HelloWorldBHO = s 'HelloWorldBHO Class'
+	{
+		CLSID = s '{66C8B901-C4D2-4951-BD86-58DBD93973E1}'
+		CurVer = s 'HelloWorld.HelloWorldBHO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {66C8B901-C4D2-4951-BD86-58DBD93973E1} = s 'HelloWorldBHO Class'
+		{
+			ProgID = s 'HelloWorld.HelloWorldBHO.1'
+			VersionIndependentProgID = s 'HelloWorld.HelloWorldBHO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{73F23E4A-840B-4141-B675-2C69C9C50F2A}'
+		}
+	}
+}
